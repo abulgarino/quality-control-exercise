@@ -62,7 +62,7 @@ Run the stocks report:
 ```sh
 #python app/stocks.py
 
-python -m app/stocks
+python -m app.stocks
 ```
 
 Run the email sender:
