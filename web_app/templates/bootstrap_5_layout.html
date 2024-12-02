@@ -14,12 +14,6 @@
 </head>
 <body>
 
-    {% set nav_links = [
-        ('/about', 'about', 'About'),
-        ('/hello', 'hello', 'Hello'),
-        ('/stocks_form', 'stocks_form', 'Stocks Form'),
-    ] -%}
-
     <!--
         FLASH MESSAGING
         https://flask.palletsprojects.com/en/1.1.x/patterns/flashing/
@@ -48,10 +42,10 @@
     {% set nav_links = [
         ('/about', 'about', 'About'),
         ('/hello', 'hello', 'Hello'),
-        ('/stocks_form', 'stocks_form', 'Stocks Form'),
+        ('/stocks/form', 'stocks_form', 'Stocks Form'),
     ] -%}
     {% set active_page = active_page|default('home') -%}
-    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
         <div class="container-fluid">
             <!--a class="navbar-brand" href="/">My Web App</a-->
             <a class="navbar-brand" href="/">
@@ -59,7 +53,7 @@
                     ICONS
                     https://icons.getbootstrap.com/
                 -->
-                <i class="bi-gift" style="font-size: 1.7rem; color: white;"></i>
+                <i class="bi-arrow-through-heart-fill" style="font-size: 1.7rem; color: white;"></i>
                 &nbsp;
                 My Web App
             </a>
@@ -98,7 +92,7 @@
 
         <footer style="margin-top:2em; margin-bottom:2em;">
         <hr>
-            &copy; Copyright 2023 [Your Name Here] |
+            &copy; Copyright 2024 [Your Name Here] |
             <a href="https://github.com/prof-rossetti/intro-to-python/blob/main/exercises/web-app-2023/README.md">Source</a>
         </footer>
     </div>
