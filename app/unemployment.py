@@ -36,7 +36,8 @@ def fetch_unemployment_json():
 
     return data
 
-
+def format_pct(value):
+    return f"{value:.2f}%"
 
 if __name__ == "__main__":
 

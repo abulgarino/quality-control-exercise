@@ -13,10 +13,17 @@ def unemployment_dashboard():
 
     try:
         data = fetch_unemployment_json()
-        latest = data[0]
-        latest_rate_pct = format_pct(float(latest["value"]))
-        latest_date = latest["date"]
+        #print(f"Fetched data: {data}" )
 
+        latest = data[0]
+        #print(f"latest entry: {latest}")
+
+        latest_rate_pct = format_pct(float(latest["value"]))
+        #print(latest_rate_pct)
+        
+        latest_date = latest["date"]
+        #print(latest_date)
+        
         #flash("Fetched Latest Unemployment Data!", "success")
         return render_template("unemployment_dashboard.html",
             latest_rate_pct=latest_rate_pct,
@@ -24,7 +31,7 @@ def unemployment_dashboard():
             data=data
         )
     except Exception as err:
-        print('OOPS', err)
+        print('1st OOPS', err)
 
         #flash("Unemployment Data Error. Please try again!", "danger")
         return redirect("/")
@@ -41,5 +48,5 @@ def unemployment_api():
         data = fetch_unemployment_json()
         return data
     except Exception as err:
-        print('OOPS', err)
+        print('2nd OOPS', err)
         return {"message":"Unemployment Data Error. Please try again."}, 404
