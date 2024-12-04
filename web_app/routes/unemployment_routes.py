@@ -24,7 +24,7 @@ def unemployment_dashboard():
         latest_date = latest["date"]
         #print(latest_date)
         
-        #flash("Fetched Latest Unemployment Data!", "success")
+        flash("Fetched Latest Unemployment Data!", "success")
         return render_template("unemployment_dashboard.html",
             latest_rate_pct=latest_rate_pct,
             latest_date=latest_date,
@@ -33,7 +33,7 @@ def unemployment_dashboard():
     except Exception as err:
         print('1st OOPS', err)
 
-        #flash("Unemployment Data Error. Please try again!", "danger")
+        flash("Unemployment Data Error. Please try again!", "danger")
         return redirect("/")
 
 #
