@@ -13,5 +13,3 @@ sendgrid
 pytest
 
 flask
-
-gunicorn
