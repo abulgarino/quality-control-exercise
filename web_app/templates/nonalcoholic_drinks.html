@@ -1,6 +1,8 @@
 {% extends "bootstrap_5_layout.html" %}
 {% set active_page = 'nonalcoholic_drinks' %}
 
+
+{% block content %}
 <h2 class="my-4">Nonalcoholic Drinks</h2>
 
 <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -10,7 +12,6 @@
             <img src="{{ drink.strDrinkThumb }}" class="card-img-top" alt="{{ drink.strDrink }}">
             <div class="card-body">
                 <h5 class="card-title">{{ drink.strDrink }}</h5>
-                <p class="card-text">A refreshing nonalcoholic drink.</p>
             </div>
         </div>
     </div>

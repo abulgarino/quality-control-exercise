@@ -44,9 +44,10 @@
         ('/hello', 'hello', 'Hello'),
         ('/stocks/form', 'stocks_form', 'Stocks Form'),
         ('/unemployment/dashboard', 'unemployment_dashboard', 'Unemployment Dashboard'),
+        ('/drinks/nonalcoholic', 'nonalcoholic_drinks', 'Nonalcoholic Drinks'),
     ] -%}
     {% set active_page = active_page|default('home') -%}
-    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-info">
         <div class="container-fluid">
             <!--a class="navbar-brand" href="/">My Web App</a-->
             <a class="navbar-brand" href="/">
@@ -54,7 +55,7 @@
                     ICONS
                     https://icons.getbootstrap.com/
                 -->
-                <i class="bi-arrow-through-heart-fill" style="font-size: 1.7rem; color: white;"></i>
+                <i class="bi bi-apple" style="font-size: 1.7rem; color: white;"></i>
                 &nbsp;
                 My Web App
             </a>
